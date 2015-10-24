@@ -13,6 +13,9 @@
     "ejs": "^2.3.4",
     "express": "^4.13.3",
     "express-ejs-layouts": "^2.0.0",
-    "request": "^2.65.0"
+    "pg": "^4.4.3",
+    "pg-hstore": "^2.3.2",
+    "request": "^2.65.0",
+    "sequelize": "^3.12.2"
   }
 }

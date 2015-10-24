@@ -1,8 +1,11 @@
 var express = require('express');
 var app = express();
+var db = require('./models');
 
 var ejsLayouts = require('express-ejs-layouts');
 app.use(ejsLayouts);
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/static'));
