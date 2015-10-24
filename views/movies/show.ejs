@@ -10,4 +10,10 @@
 	<span class="glyphicon glyphicon-star-empty"></span>
 <% } %> 
 <br>
+
+<form method="POST" action="/favorites/">
+	<input type="hidden" value="<%= imdbID + ',' + Title + ',' + Year + ',' + Poster %>" name="id">
+	<button type="submit" class="btn btn-primary">Add to Favorites</button>
+</form>
+
 <a href="javascript:history.back()"><button type="button" class="btn btn-lg btn-info">Back</button></a>
