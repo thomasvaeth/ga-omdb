@@ -1,6 +1,11 @@
-<ul class="list-unstyled">
 <% Search.forEach(function(movie) { %>
-	<a href="search/<%= movie.imdbID%>"><li><p><%= movie.Title; %></p></li></a>
+	<a class="well-link" href="search/<%= movie.imdbID%>">
+		<div class="well">
+			<%= movie.Title; %>
+		</div>
+	</a>
 <% }); %>
-</ul>
+
+<div class="btn-center">
 <a href="/"><button type="button" class="btn btn-lg btn-info">Back</button></a>
+</div>

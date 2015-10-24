@@ -6,20 +6,29 @@
 	padding-top: 20px;
 }
 
-li {
-	padding-top: 10px;
-}
-
 .btn-lg {
 	margin-top: 10px;
 }
 
-.row a {
+.row a,
+.well-link {
 	color: black;
 	text-decoration: none;
 }
 
 .col-lg-4:hover,
 .col-lg-6:hover {
+	border-radius: 4px;
 	background-color: #e5e5e5;
+}
+
+.well {
+	display: inline-block;
+	margin-left: 3px;
+	margin-right: 5px;
+	width: 350px;
+}
+
+.btn-center {
+	text-align: center;
 }

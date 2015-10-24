@@ -1,1 +1,7 @@
 <h1>This is the favorites page</h1>
+
+<% favorites.forEach(function(favorite) { %>
+	<div class="well">
+		<%= favorite.title; %>
+	</div>
+<% }); %>

@@ -34,18 +34,9 @@ app.post('/favorites', function(req, res) {
 });
 
 app.get('/favorites', function(req, res) {
-	res.render('movies/favorites')
+	db.favorite.findAll().then(function(favorites) {
+		res.render('movies/favorites', {favorites: favorites});
+	});
 });
 
 app.listen(3000);
-
-app.post('/links', function(req, res) {
-	var data = req.body.url;
-	db.link.create({url: data}).then(function(link) {
-		var hash = hashids.encode(link.id);
-		link.hash = hash;
-		link.save().then(function() {
-			res.redirect('/links/' + link.id);
-		});
-	});
-});
