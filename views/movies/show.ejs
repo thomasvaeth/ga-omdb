@@ -1,0 +1,13 @@
+<h1><%= Title %></h1>
+<p><%= Plot %></p>
+<p>IMDb rating: <%= imdbRating %>/10</p>
+<% for (var i = 0; i < Math.round(imdbRating); i++) { %>
+	<span class="glyphicon glyphicon-star"></span>
+<% } %>
+
+<% var emptyStar = 10 - Math.round(imdbRating); %>
+<% for (var j = 0; j < emptyStar; j++) { %>
+	<span class="glyphicon glyphicon-star-empty"></span>
+<% } %> 
+<br>
+<a href="javascript:history.back()"><button type="button" class="btn btn-lg btn-info">Back</button></a>
