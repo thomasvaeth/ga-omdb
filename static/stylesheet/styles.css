@@ -14,7 +14,15 @@ h4 {
 }
 
 .header {
-	padding-top: 20px;
+	padding-top: 15px;
+}
+
+ul {
+	margin-top: 30px;
+}
+
+.jumbotron .form-control {
+	width: 65%;
 }
 
 .btn-lg {
