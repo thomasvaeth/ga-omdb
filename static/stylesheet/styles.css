@@ -10,19 +10,23 @@
 	margin-top: 10px;
 }
 
-.example-search {
-	text-align: center;
-}
-
 .row a,
 .well-link {
 	color: black;
 	text-decoration: none;
 }
 
+.example-search {
+	text-align: center;
+}
+
 .home-div:hover {
 	border-radius: 4px;
 	background-color: #e5e5e5;
+}
+
+.img-home {
+	width: 100%;
 }
 
 .well {
@@ -32,14 +36,10 @@
 	width: 350px;
 }
 
-.btn-center {
-	text-align: center;
-}
-
-.img-home {
-	width: 100%;
-}
-
 .img-details {
 	height: 450px;
+}
+
+.btn-center {
+	text-align: center;
 }
