@@ -22,7 +22,7 @@ ul {
 }
 
 .jumbotron .form-control {
-	width: 65%;
+	width: 100%;
 }
 
 .input-danger {
@@ -52,6 +52,7 @@ ul {
 }
 
 .img-home {
+	padding: 5px 0;
 	width: 100%;
 }
 
@@ -81,4 +82,14 @@ ul {
 
 .container .text-muted {
 	padding-top: 15px;
+}
+
+@media (min-width: 768px) {
+	.jumbotron .form-control {
+		width: 65%;
+	}
+
+	.img-home {
+		padding: 0;
+	}
 }
