@@ -25,6 +25,14 @@ ul {
 	width: 65%;
 }
 
+.input-danger {
+	border-color: #d9534f
+}
+
+.input-danger:active {
+	border-color: #c12e2a;
+}
+
 .btn-lg {
 	margin-top: 10px;
 }
