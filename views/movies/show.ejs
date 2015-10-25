@@ -6,6 +6,7 @@
 			<p><%= Rated %></p>
 			<p><%= Plot %></p>
 			<p>IMDb rating: <%= imdbRating %> / 10</p>
+			<p>Rotten Tomatoes Tomatometer: <%= tomatoMeter %>%</p>
 
 			<form method="POST" action="/favorites">
 				<input type="hidden" value="<%= imdbID + ',' + Title + ',' + Year + ',' + Poster %>" name="id">
