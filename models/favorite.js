@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes) {
     imdbId: DataTypes.STRING,
     title: DataTypes.STRING,
     year: DataTypes.INTEGER,
-    poster: DataTypes.STRING
+    director: DataTypes.STRING,
+    actor: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {

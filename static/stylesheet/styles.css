@@ -60,16 +60,21 @@ ul {
 	width: 100%;
 }
 
+.favorites-container {
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.fa-heart {
+	color: #c12e2a;
+}
+
 .well {
 	display: inline-block;
 	margin-left: 3px;
 	margin-right: 5px;
 	width: 100%;
 	text-align: center;
-}
-
-.img-details {
-	height: 450px;
 }
 
 .footer {

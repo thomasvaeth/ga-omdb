@@ -1,10 +1,18 @@
-<h1>This is the favorites page</h1>
+<div class="favorites-container">
+	<i class="fa fa-heart fa-4x"></i>
+	<i class="fa fa-heart fa-4x"></i>
+	<i class="fa fa-heart fa-4x"></i>
+	<i class="fa fa-heart fa-4x"></i>
+	<i class="fa fa-heart fa-4x"></i>
+</div>
 
 <% favorites.forEach(function(favorite) { %>
 	<a href="/search/<%= favorite.imdbId %>" class="well-link">
 		<div class="well">
-			<%= favorite.title %> <br />
-			<%= favorite.year %>
+			<strong><%= favorite.title %></strong> <br />
+			<%= favorite.year %> <br />
+			Directed by: <%= favorite.director %> <br />
+			Starring: <%= favorite.actor %>
 		</div>
 	</a>
 <% }); %>
