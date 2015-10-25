@@ -18,14 +18,6 @@ app.use('/search', require('./controllers/movie-search'));
 
 app.use('/search', require('./controllers/movie-information'));
 
-app.get('/about', function(req, res) {
-	res.render('about');
-});
-
-app.get('/contact', function(req, res) {
-	res.render('contact');
-});
-
 app.post('/favorites', function(req, res) {
 	var data = req.body.id.split(',');
 	db.favorite.create({imdbId: data[0], title: data[1], year: data[2], poster: data[3]}).then(function(movie) {

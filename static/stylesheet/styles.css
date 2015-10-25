@@ -10,14 +10,17 @@
 	margin-top: 10px;
 }
 
+.example-search {
+	text-align: center;
+}
+
 .row a,
 .well-link {
 	color: black;
 	text-decoration: none;
 }
 
-.col-lg-4:hover,
-.col-lg-6:hover {
+.home-div:hover {
 	border-radius: 4px;
 	background-color: #e5e5e5;
 }
@@ -31,4 +34,12 @@
 
 .btn-center {
 	text-align: center;
+}
+
+.img-home {
+	width: 100%;
+}
+
+.img-details {
+	height: 450px;
 }
