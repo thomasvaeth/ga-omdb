@@ -1,3 +1,14 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Poiret One', cursive;
+}
+
 .container {
 	max-width: 750px;
 }
@@ -34,6 +45,7 @@
 	margin-left: 3px;
 	margin-right: 5px;
 	width: 350px;
+	text-align: center;
 }
 
 .img-details {

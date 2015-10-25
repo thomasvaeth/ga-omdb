@@ -1,7 +1,24 @@
 <h1>This is the favorites page</h1>
 
 <% favorites.forEach(function(favorite) { %>
-	<div class="well">
-		<%= favorite.title; %>
-	</div>
+	<a href="/search/<%= favorite.imdbId %>" class="well-link">
+		<div class="well">
+			<%= favorite.title %> <br />
+			<%= favorite.year %>
+		</div>
+	</a>
 <% }); %>
+
+<hr>
+
+<div class="row">
+	<div class="col-lg-6 col-lg-offset-3 btn-center">
+		<h2>Proin luctus non ante a pellentesque. Maecenas molestie.</h2>
+		<p>
+			<form action="/search" method="GET" role="search">
+				<input class="form-control input-lg" type="text" placeholder="More Favorites" name="q" autocomplete="off">
+				<button class="btn btn-lg btn-success" role="button" type="submit">Search</button>
+			</form>
+		</p>
+	</div>
+</div>
