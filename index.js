@@ -17,4 +17,4 @@ app.use('/search', require('./controllers/movie-information'));
 
 app.use('/favorites', require('./controllers/movie-favorites'));
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
