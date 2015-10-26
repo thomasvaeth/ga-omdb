@@ -65,6 +65,10 @@ ul {
 	padding-bottom: 15px;
 }
 
+#header-heart {
+	font-size: 20px;
+}
+
 .fa-heart {
 	color: #c12e2a;
 }

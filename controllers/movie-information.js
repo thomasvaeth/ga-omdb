@@ -11,7 +11,7 @@ router.get('/:idx', function(req, res) {
 			favorited = true;
 		}
 	}).then(function() {
-		request('http://www.omdbapi.com/?i=' + idx + '&tomatoes=true&apikey=dd048a3e', function(error, response, body) {
+		request('http://www.omdbapi.com/?i=' + idx + '&tomatoes=true&apikey=c62c7f29', function(error, response, body) {
 			if (!error && response.statusCode === 200) {
 				var data = JSON.parse(body);
 				res.render('movies/show', {data: data, favorited: favorited});
