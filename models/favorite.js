@@ -10,6 +10,8 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         models.favorite.hasMany(models.comment);
+        models.favorite.hasMany(models.tag);
+        models.favorite.belongsToMany(models.tag, {through: 'favoritesTags'});
       }
     }
   });
