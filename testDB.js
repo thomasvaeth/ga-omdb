@@ -22,3 +22,12 @@
 // 		console.log('Created');
 // 	}
 // });
+
+// db.favorite.findOne().then(function(favorite) {
+// 	favorite.createComment({
+// 		comment: 'This movie is great!',
+// 		author: 'Chyi Wang'
+// 	}).then(function(comment) {
+// 		console.log(comment.get());
+// 	});
+// });
