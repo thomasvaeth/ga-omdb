@@ -20,7 +20,7 @@ router.post('/', function(req, res) {
 				res.redirect('/search/' + movie.imdbId);
 			});
 		}
-	})
+	});
 });
 
 router.get('/', function(req, res) {
