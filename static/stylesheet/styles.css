@@ -81,6 +81,12 @@ ul {
 	text-align: center;
 }
 
+#tags-well {
+	width: 48%;
+	margin-left: 4px;
+	margin-right: 2px;
+}
+
 strong {
 	font-size: 16px;
 }
@@ -93,6 +99,24 @@ strong {
 
 .container .text-muted {
 	padding-top: 15px;
+}
+
+.comments-header,
+.tags-header,
+.tags-form {
+	text-align: center;
+}
+
+.btn-center {
+	text-align: center;
+}
+
+textarea {
+	margin-top: 5px;
+}
+
+.btn-default {
+	margin: 4px 2px 0 2px;
 }
 
 @media (min-width: 768px) {
@@ -112,7 +136,12 @@ strong {
 		width: 350px;
 	}
 
-	.btn-center {
+	#tags-well {
+		width: 23%;
+		margin-left: 8px;
+	}
+
+	.btn-show {
 		text-align: center;
 	}
 }
