@@ -9,10 +9,16 @@
 <% favorites.forEach(function(favorite) { %>
 	<a href="/search/<%= favorite.imdbId %>" class="well-link">
 		<div class="well">
-			<strong><%= favorite.title %></strong> <br />
-			<%= favorite.year %> <br />
-			Directed by: <%= favorite.director %> <br />
-			Starring: <%= favorite.actor %>
+			<div class="row">
+				<strong><%= favorite.title %></strong> <br />
+				<%= favorite.year %> <br />
+				Directed by: <%= favorite.director %> <br />
+				Starring: <%= favorite.actor %>
+			</div>
+			<div class="row">
+				<a href="/favorites/<%= favorite.id %>/comments"><button class="btn btn-default">Comments</button></a>
+				<a href="/favorites/<%= favorite.id %>/tags"><button class="btn btn-default">Tags</button></a>
+			</div>
 		</div>
 	</a>
 <% }); %>

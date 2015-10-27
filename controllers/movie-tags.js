@@ -6,7 +6,7 @@ var db = require('../models');
 var bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({extended: false}));
 
-router.post('/:idx/tags', function(req, res) {
+router.post('/favorites/:idx/tags', function(req, res) {
 	var idx = req.params.idx;
 	var tagList = req.body.tag;
 	db.favorite.findById(idx).then(function(favorite) {
@@ -18,15 +18,27 @@ router.post('/:idx/tags', function(req, res) {
 	});
 });
 
-router.get('/:idx/tags', function(req, res) {
+router.get('/favorites/:idx/tags', function(req, res) {
 	var idx = req.params.idx;
 	db.favorite.find({where: {id: idx}}).then(function(favorite) {
-		var favId = favorite.id;
-		res.render('movies/tags', {favorite: favorite});
-		// db.comment.findAll({where: {favoriteId: favId}}).then(function(tag) {
-		// 	res.render('movies/tags', {tag: tag, favorite: favorite});
-		// });
+		// var favId = favorite.id;
+		res.render('tags/movie-tags', {favorite: favorite});
 	});
+});
+
+router.get('/tags', function(req, res) {
+	db.tag.findAll().then(function(tags) {
+		res.render('tags/all-tags', {tags: tags});
+	});
+});
+
+router.get('/favorites/:idx', function(req, res) {
+	var idx = req.params.idx;
+	db.tag.find({where: {id: idx}}).then(function(tag) {
+		tag.getFavorites().then(function(favorites) {
+			res.render('movies/favorites', {favorites: favorites})
+		})
+	})
 });
 
 module.exports = router;

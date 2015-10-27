@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	
 	$('form').submit(function(e) {
 		search = $('input').val();
 		if (search === '') {
@@ -12,4 +13,17 @@ $(document).ready(function() {
 			$('button').addClass('btn-success');
 		}
 	});
+
+	// Stack Overflow - disable spaces in input field
+	$('.tag-input').on({
+		keydown: function(e) {
+			if (e.which === 32) {
+				return false
+			}
+		},
+		change: function() {
+			this.value = this.value.replace(/\s/g, '');
+		}
+	});
+
 });

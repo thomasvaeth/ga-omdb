@@ -12,13 +12,11 @@ app.get('/', function(req, res) {
 });
 
 app.use('/search', require('./controllers/movie-search'));
-
 app.use('/search', require('./controllers/movie-information'));
-
 app.use('/favorites', require('./controllers/movie-favorites'));
 
-app.use('/favorites', require('./controllers/movie-comments'));
+app.use('/', require('./controllers/movie-comments'));
 
-app.use('/favorites', require('./controllers/movie-tags'));
+app.use('/', require('./controllers/movie-tags'));
 
 app.listen(process.env.PORT || 3000);
