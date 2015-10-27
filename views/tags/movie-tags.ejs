@@ -14,6 +14,16 @@
 	</div>
 </div>
 
+<hr>
+
+<div class="row">
+	<% tags.forEach(function(tag) { %>
+		<div class="well" id="tags-well">
+			<%= tag.name %>
+		</div>
+	<% }); %>
+</div>
+
 <div class="btn-center">
 	<a href="javascript:history.back()"><button type="button" class="btn btn-lg btn-info">Back</button></a>
 </div>

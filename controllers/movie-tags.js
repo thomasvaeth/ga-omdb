@@ -21,8 +21,9 @@ router.post('/favorites/:idx/tags', function(req, res) {
 router.get('/favorites/:idx/tags', function(req, res) {
 	var idx = req.params.idx;
 	db.favorite.find({where: {id: idx}}).then(function(favorite) {
-		// var favId = favorite.id;
-		res.render('tags/movie-tags', {favorite: favorite});
+		favorite.getTags().then(function(tags) {
+			res.render('tags/movie-tags', {favorite: favorite, tags: tags});
+		});
 	});
 });
 
