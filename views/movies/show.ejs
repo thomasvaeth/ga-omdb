@@ -1,34 +1,33 @@
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<% if (favorited) { %>
+			<h1><%= data.Title %> <a href="/favorites"><i class="fa fa-heart" id="header-heart"></i></a></h1>
+		<% } else { %>
+			<h1><%= data.Title %></h1>
+		<% } %>
+		<p>Year: <%= data.Year %></p>
+		<p>Rated: <%= data.Rated %></p>
+		<p>Genre: <%= data.Genre %></p>
+		<p>Director: <%= data.Director %></p>
+		<p>Stars: <%= data.Actors %></p>
+		<p><%= data.Plot %></p>
+		<p>IMDb rating: <%= data.imdbRating %> / 10</p>
+		<p>Rotten Tomatoes Tomatometer: <%= data.tomatoMeter %>%</p>
 
-	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<form method="POST" action="/favorites">
+			<input type="hidden" value="<%= data.imdbID + '_' + data.Title + '_' + data.Year + '_' + data.Director + '_' + data.Actors %>" name="id">
 			<% if (favorited) { %>
-				<h1><%= data.Title %> <a href="/favorites"><i class="fa fa-heart" id="header-heart"></i></a></h1>
+				<button type="submit" class="btn btn-lg btn-danger">Remove From Favorites</button>
 			<% } else { %>
-				<h1><%= data.Title %></h1>
+				<button type="submit" class="btn btn-lg btn-primary">Add to Favorites</button>
 			<% } %>
-			<p>Year: <%= data.Year %></p>
-			<p>Rated: <%= data.Rated %></p>
-			<p>Genre: <%= data.Genre %></p>
-			<p>Director: <%= data.Director %></p>
-			<p>Stars: <%= data.Actors %></p>
-			<p><%= data.Plot %></p>
-			<p>IMDb rating: <%= data.imdbRating %> / 10</p>
-			<p>Rotten Tomatoes Tomatometer: <%= data.tomatoMeter %>%</p>
+		</form>
 
-			<form method="POST" action="/favorites">
-				<input type="hidden" value="<%= data.imdbID + '_' + data.Title + '_' + data.Year + '_' + data.Director + '_' + data.Actors %>" name="id">
-				<% if (favorited) { %>
-					<button type="submit" class="btn btn-lg btn-danger">Remove From Favorites</button>
-				<% } else { %>
-					<button type="submit" class="btn btn-lg btn-primary">Add to Favorites</button>
-				<% } %>
-			</form>
-
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 response-hidden">
-			<img class="image-details" src="<%= data.Poster %>" alt="Poster">
-		</div>
 	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 response-hidden">
+		<img class="image-details" src="<%= data.Poster %>" alt="Poster">
+	</div>
+</div>
 
 <div class="btn-show">
 	<a href="javascript:history.back()"><button type="button" class="btn btn-lg btn-info">Back</button></a>

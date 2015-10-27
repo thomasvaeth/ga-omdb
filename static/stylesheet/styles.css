@@ -115,6 +115,10 @@ textarea {
 	margin-top: 5px;
 }
 
+.btn-default {
+	margin: 4px 2px 0 2px;
+}
+
 @media (min-width: 768px) {
 	.jumbotron .form-control {
 		width: 65%;
