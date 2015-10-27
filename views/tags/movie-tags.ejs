@@ -7,7 +7,7 @@
 	<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xs-offset-3 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
 		<p>
 			<form action="/favorites/<%= favorite.id %>/tags" method="POST" role="search" class="tags-form">
-				<input class="form-control input-lg tag-input" type="text" placeholder="Add A Tag" name="tag" autocomplete="off">
+				<input class="form-control input-lg tag-input" type="text" placeholder="Add A Tag" name="tag" autocomplete="off" required>
 				<button class="btn btn-lg btn-primary btn-input tags-button" role="button" type="submit">Add Tag</button>
 			</form>
 		</p>
@@ -17,12 +17,19 @@
 <hr>
 
 <div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h2 class="tags-header">Other Tags for <%= favorite.title %>:</h2>
+	</div>
+</div>
+<div class="row">
 	<% tags.forEach(function(tag) { %>
 		<div class="well" id="tags-well">
 			<%= tag.name %>
 		</div>
 	<% }); %>
 </div>
+
+<hr>
 
 <div class="btn-center">
 	<a href="javascript:history.back()"><button type="button" class="btn btn-lg btn-info">Back</button></a>
