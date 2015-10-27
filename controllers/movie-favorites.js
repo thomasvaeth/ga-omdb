@@ -17,7 +17,7 @@ router.post('/', function(req, res) {
 			});
 		} else {
 			db.favorite.create({imdbId: data[0], title: data[1], year: data[2], director: data[3], actor: actors}).then(function(movie) {
-				res.redirect('/search/' + movie.imdbId);
+				res.redirect('/favorites');
 			});
 		}
 	});
