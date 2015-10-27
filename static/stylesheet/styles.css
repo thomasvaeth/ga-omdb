@@ -101,12 +101,18 @@ strong {
 	padding-top: 15px;
 }
 
-.tags-header {
+.comments-header,
+.tags-header,
+.tags-form {
 	text-align: center;
 }
 
-.tags-form {
+.btn-center {
 	text-align: center;
+}
+
+textarea {
+	margin-top: 5px;
 }
 
 @media (min-width: 768px) {
@@ -131,7 +137,7 @@ strong {
 		margin-left: 8px;
 	}
 
-	.btn-center {
+	.btn-show {
 		text-align: center;
 	}
 }
