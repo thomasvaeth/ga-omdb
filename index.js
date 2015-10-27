@@ -19,4 +19,6 @@ app.use('/favorites', require('./controllers/movie-favorites'));
 
 app.use('/favorites', require('./controllers/movie-comments'));
 
+app.use('/favorites', require('./controllers/movie-tags'));
+
 app.listen(process.env.PORT || 3000);
