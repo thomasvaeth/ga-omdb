@@ -12,7 +12,7 @@ router.post('/favorites/:idx/comments', function(req, res) {
 	var commentText = req.body.comment;
 	db.comment.create({author: authorName, comment: commentText, favoriteId: idx}).then(function(comment) {
 		res.redirect('/favorites/' + idx +'/comments')
-	})
+	});
 });
 
 router.get('/favorites/:idx/comments', function(req, res) {
@@ -23,5 +23,16 @@ router.get('/favorites/:idx/comments', function(req, res) {
 		});
 	});
 });
+
+router.post('/favorites/:favoriteId/comments/:idx', function(req, res) {
+	var idx = req.params.idx;
+	var authorName = req.body.author;
+	var commentText = req.body.comment;
+	db.comment.find({where: {id: idx}}).then(function(comment) {
+		comment.update({author: authorName, comment: commentText}).then(function() {
+			res.redirect('/favorites/' + req.params.favoriteId + '/comments');
+		});
+	});
+})
 
 module.exports = router;
