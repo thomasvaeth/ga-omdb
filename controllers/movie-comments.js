@@ -18,7 +18,10 @@ router.post('/favorites/:idx/comments', function(req, res) {
 router.get('/favorites/:idx/comments', function(req, res) {
 	var idx = req.params.idx;
 	db.favorite.find({where: {id: idx}}).then(function(favorite) {
-		db.comment.findAll({where: {favoriteId: idx}}).then(function(comments) {
+		db.comment.findAll({
+			where: {favoriteId: idx},
+			order: 'id ASC'
+		}).then(function(comments) {
 			res.render('movies/comments', {comments: comments, favorite: favorite});
 		});
 	});
